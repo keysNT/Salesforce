@@ -71,7 +71,7 @@ function hnsfInsertAccount( $order_id = null ){
 	// check duplicate item
 	$response = hnsfDuplicateItem( 'Account', array( 'field' => 'name', 'value' => $crm_data['Name'] ) );
 	if( ! empty( $response->records ) ) {
-		return 'aaaa';
+		return;
 	}
 	
 	if ($billing_street)
@@ -254,6 +254,8 @@ function hnsfDuplicateItem( $module, $param ) {
 	
 	return $response;
 }
+
+
 
 function hnsfEqueue($order_id){
 	global $wpdb;
