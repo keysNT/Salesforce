@@ -102,7 +102,6 @@ function hnsfQuery( $query ) {
 function hnsfUpdate($module, $param, $id){
 	$data = getHnsfAccessToken();
 	$url = $data['instance_url'] . "/services/data/v28.0/sobjects/" . $module . "/" . $id;
-	
 	$curl = curl_init($url);
 	curl_setopt($curl, CURLOPT_HEADER, false);
 	curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
